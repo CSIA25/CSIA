@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/CSIA/static/css/main.0afde983.css",
-    "main.js": "/CSIA/static/js/main.1f47ddd4.js",
+    "main.js": "/CSIA/static/js/main.468bbd72.js",
     "static/js/151.22ca5c16.chunk.js": "/CSIA/static/js/151.22ca5c16.chunk.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/CSIA/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/fa-solid-900.ttf": "/CSIA/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
@@ -19,11 +19,11 @@
     "static/media/fa-v4compatibility.woff2": "/CSIA/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/CSIA/index.html",
     "main.0afde983.css.map": "/CSIA/static/css/main.0afde983.css.map",
-    "main.1f47ddd4.js.map": "/CSIA/static/js/main.1f47ddd4.js.map",
+    "main.468bbd72.js.map": "/CSIA/static/js/main.468bbd72.js.map",
     "151.22ca5c16.chunk.js.map": "/CSIA/static/js/151.22ca5c16.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0afde983.css",
-    "static/js/main.1f47ddd4.js"
+    "static/js/main.468bbd72.js"
   ]
 }
