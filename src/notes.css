@@ -1,0 +1,252 @@
+/* General Styles */
+.notes-app {
+    width: 90vw; /* Set width to 100% of the viewport width */
+    height: 90vh; /* Ensure it takes the full height */
+    margin: 0;
+    padding: 20px;
+    font-family: "Nunito", sans-serif;
+    background: #f8f9fa;
+    border-radius: 0; /* Remove border-radius for full-width effect */
+    box-shadow: none; /* No shadow for full screen appearance */
+    overflow: hidden;
+    box-sizing: border-box; /* Prevent overflow from padding */
+    border-radius: 50px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0077b6;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    left: 0;
+  }
+  
+  h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #f77f00;
+    margin: 12px auto 0;
+    border-radius: 2px;
+  }
+  
+  /* Add Note Section */
+  .add-note {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+  }
+  
+  .add-note textarea,
+  .add-note input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #dcdfe4;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #333;
+    transition: all 0.3s ease;
+    resize: vertical;
+    box-sizing: border-box; /* Prevent overflow */
+  }
+  
+  .add-note textarea::placeholder,
+  .add-note input::placeholder {
+    color: #9b9ea4;
+    font-style: italic;
+  }
+  
+  .add-note textarea:focus,
+  .add-note input:focus {
+    border-color: #0077b6;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 119, 182, 0.4);
+  }
+  
+  .add-note button {
+    padding: 12px;
+    background: #0077b6;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s ease;
+  }
+  
+  .add-note button:hover {
+    background: #005f8a;
+  }
+  
+  .add-note button:active {
+    background: #004466;
+  }
+  
+  /* Search Bar */
+  .search input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #dcdfe4;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Prevent overflow */
+  }
+  
+  .search input:focus {
+    border-color: #0077b6;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 119, 182, 0.3);
+  }
+  
+  /* Notes List */
+  .notes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-height: 500px;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+  
+  /* Note Card */
+  .note-card {
+    padding: 18px;
+    border: 1px solid #dcdfe4;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    word-wrap: break-word; /* Ensures text wrapping in the note */
+    box-sizing: border-box;
+  }
+  
+  .note-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .note-text {
+    margin: 0;
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  
+  .note-tag {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    background: #0077b6;
+    color: #fff;
+    white-space: nowrap; /* Prevent overflow of tag text */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Truncate long text */
+  }
+  
+  .note-actions {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .note-actions button {
+    padding: 10px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.3s ease;
+  }
+  
+  .note-actions button:first-child {
+    background: #0077b6;
+    color: #fff;
+  }
+  
+  .note-actions button:last-child {
+    background: #e63946;
+    color: #fff;
+  }
+  
+  .note-actions button:hover:first-child {
+    background: #005f8a;
+  }
+  
+  .note-actions button:hover:last-child {
+    background: #c5273a;
+  }
+  
+  .note-actions button:active {
+    transform: scale(0.98);
+    box-shadow: none;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .notes-app {
+        padding: 15px;
+    }
+  
+    h1 {
+        font-size: 2rem;
+    }
+  
+    .add-note {
+        gap: 10px;
+    }
+  
+    .note-card {
+        padding: 15px;
+    }
+  
+    .note-text {
+        font-size: 1rem;
+    }
+  }
+  
+  /* Back Button */
+  .back-button {
+    text-decoration: none; /* Removes underline */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .back-button:hover {
+    background-color: #005f8a;
+  }
+  
+  .back-button i {
+    font-size: 18px;
+  }
+  

@@ -1,0 +1,212 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: linear-gradient(to right, #f4f9fc, #dff3fc);
+    color: #333;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Navbar Styles */
+header {
+    background: black;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    box-sizing: border-box;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fca311;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('/lofigirl.jpg') no-repeat center center / cover;
+    color: white;
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+.hero-section h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Resources Section */
+.resources-section {
+    padding: 5rem 0; /* Remove side padding for full width */
+    background: #f1f9ff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.resources-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Always 3 columns */
+    gap: 2rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem; /* Optional padding for better readability */
+    box-sizing: border-box;
+}
+
+.resource-card {
+    background: #e8f0fc;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.resource-card a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #4958e3;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.resource-card a:hover {
+    background-color: #374bb7;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.resource-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.resource-card p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #004aad;
+    color: white;
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer a {
+    color: #fca311;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .resources-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .resources-grid {
+        grid-template-columns: 1fr; /* Single column for small screens */
+    }
+
+    .hero-section h2 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.8rem;
+    }
+}
